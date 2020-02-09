@@ -105,14 +105,14 @@ const routes = [
     //       title: "会员等级",
     //     },
     //   },
-    //   {
-    //     path: "/user/list",
-    //     name: "/user/list",
-    //     component: () => import("@/views/User.vue"),
-    //     meta: {
-    //       title: "用户管理",
-    //     },
-    //   },
+      {
+        path: "/user/list",
+        name: "/user/list",
+        component: () => import("@/views/User.vue"),
+        meta: {
+          title: "用户管理",
+        },
+      },
     //   {
     //     path: "/comment/list",
     //     name: "/comment/list",

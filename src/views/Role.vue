@@ -328,7 +328,7 @@ const treeCheck = (...e) => {
   defaultId.value = [...checkedKeys, ...halfCheckedKeys];
 };
 
-//在显示复选框的情况下，是否严格的遵循父子不互相关联的做法，默认为 false
+//在显示复选框的情况下，是否严格的遵循父子不互相关联的做法，默认为 false，表示严格遵循父子互相关联
 const checkStrictly = ref(false);
 
 //确定分配角色
