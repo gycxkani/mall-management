@@ -3,6 +3,7 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
+  
   <div>
     <a href="https://vite.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -11,6 +12,11 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  <nav>
+    <router-link to="./home">Home</router-link> |
+    <router-link to="./about">About</router-link> |
+  </nav>
+  <router-view></router-view>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
