@@ -46,7 +46,19 @@
 </template>
 
 <script setup>
-import { ref, reactive } from "vue";
+import { ref, reactive, onMounted, onBeforeMount } from "vue";
+import { loginFn } from "@/api/login";
+import { ElMessage } from "element-plus";
+// import { useRouter } from 'vue-router'
+// //解构useStore方法
+// import { useStore } from 'vuex'
+// //获取仓库实例
+// const store = useStore()
+// const router = useRouter()
+
+//定义loading，初始化为false，正常单击
+const loading = ref(false);
+
 const ruleFormRefLogin = ref(null);
 const ruleFormLogin = reactive({
   username: "",
@@ -62,14 +74,64 @@ const rulesLogin = {
     { min: 6, max: 15, message: "长度应为6到15位之间", trigger: "blur" },
   ],
 };
+// 登录
 const loginHandle = () => {
-  ruleFormRefLogin.value.validate((isValid) => {
-    if (!isValid) {
-      return;
+  // 校验表单
+  ruleFormRefLogin.value.validate(async (isValid) => {
+    try {
+      if (!isValid) {
+        return;
+      }
+      //表单验证通过，开始调用接口，将loading状态设置为true，禁止单击
+      loading.value = true;
+      //调用登录api
+      const res = await loginFn(ruleFormLogin);
+      console.log(res);
+      if (!res.data || res.data.status !== 200) {
+        //登录失败提示
+        return ElMessage.error(res.msg);
+      }
+
+      //登录成功提示
+      ElMessage({
+        message: "登录成功",
+        type: "success",
+      });
+      //token本地存储
+      window.sessionStorage.setItem("token", res.data.token);
+      //调用getUserInfoFn()
+      // const res2 = await getUserInfoFn()
+      // console.log(res2)
+      // if (!res2.data || res2.data.status !== 200) {
+      //     //获取管理员信息失败
+      //     return ElMessage.error('获取管理员信息失败')
+      // }
+      // //获取管理员信息成功,调用store.commit方法，将用户信息存储到store中
+      // store.commit('setUserInfo',res2.data)
+      //跳转到后台首页
+      router.push("/home");
+    } catch (err) {
+      console.log(err);
+    } finally {
+      // 接口调用结束，将loading状态设置为false，恢复单击
+      loading.value = false;
     }
-    // ...下一步
   });
 };
+
+// //监听回车
+// function onKeyUp(e) {
+//   console.log(e);
+//   if (e.key == "Enter") loginHandle();
+// }
+// onMounted(() => {
+//   //添加键盘监听事件
+//   document.addEventListener("keyup", onKeyUp);
+// });
+// onBeforeMount(() => {
+//   //移除键盘监听
+//   document.removeEventListener("keyup", onKeyUp);
+// });
 </script>
 
 <style lang="less" scoped>
