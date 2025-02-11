@@ -4,20 +4,158 @@ import nProgress from "nprogress";
 
 const routes = [
   {
+    path: "/login",
+    component: () => import("@/views/login.vue"),
+  },
+  {
     path: "/",
-    name: "Landing",
     redirect: "/home",
   },
+  //后台主页路由
   {
     path: "/home",
-    name: "Home",
+    name: "admin",
     component: () => import("@/views/Home.vue"),
+    // children: [
+    //   {
+    //     path: "/home",
+    //     name: "/home",
+    //     component: () => import("@/views/HomeIndex.vue"),
+    //     meta: {
+    //       title: "后台首页",
+    //     },
+    //   },
+    //   {
+    //     path: "/goods/list",
+    //     name: "/goods/list",
+    //     component: () => import("@/views/GoodsList.vue"),
+    //     meta: {
+    //       title: "商品管理",
+    //     },
+    //   },
+    //   {
+    //     path: "/category/list",
+    //     name: "/category/list",
+    //     component: () => import("@/views/cateList.vue"),
+    //     meta: {
+    //       title: "分类管理",
+    //     },
+    //   },
+    //   {
+    //     path: "/image/list",
+    //     name: "/image/list",
+    //     component: () => import("@/views/PicList.vue"),
+    //     meta: {
+    //       title: "图库管理",
+    //     },
+    //   },
+    //   {
+    //     path: "/notice/list",
+    //     name: "/notice/list",
+    //     component: () => import("@/views/News.vue"),
+    //     meta: {
+    //       title: "公告管理",
+    //     },
+    //   },
+    //   {
+    //     path: "/manager/list",
+    //     name: "/manager/list",
+    //     component: () => import("@/views/Manager.vue"),
+    //     meta: {
+    //       title: "管理员管理",
+    //     },
+    //   },
+    //   {
+    //     path: "/access/list",
+    //     name: "/access/list",
+    //     component: () => import("@/views/Rules.vue"),
+    //     meta: {
+    //       title: "菜单权限管理",
+    //     },
+    //   },
+    //   {
+    //     path: "/role/list",
+    //     name: "/role/list",
+    //     component: () => import("@/views/Role.vue"),
+    //     meta: {
+    //       title: "角色管理",
+    //     },
+    //   },
+    //   {
+    //     path: "/skus/list",
+    //     name: "/skus/list",
+    //     component: () => import("@/views/Skus.vue"),
+    //     meta: {
+    //       title: "规格管理",
+    //     },
+    //   },
+    //   {
+    //     path: "/coupon/list",
+    //     name: "/coupon/list",
+    //     component: () => import("@/views/Coupon.vue"),
+    //     meta: {
+    //       title: "优惠券管理",
+    //     },
+    //   },
+    //   {
+    //     path: "/level/list",
+    //     name: "/level/list",
+    //     component: () => import("@/views/Level.vue"),
+    //     meta: {
+    //       title: "会员等级",
+    //     },
+    //   },
+    //   {
+    //     path: "/user/list",
+    //     name: "/user/list",
+    //     component: () => import("@/views/User.vue"),
+    //     meta: {
+    //       title: "用户管理",
+    //     },
+    //   },
+    //   {
+    //     path: "/comment/list",
+    //     name: "/comment/list",
+    //     component: () => import("@/views/Comment.vue"),
+    //     meta: {
+    //       title: "评论管理",
+    //     },
+    //   },
+    //   {
+    //     path: "/order/list",
+    //     name: "/order/list",
+    //     component: () => import("@/views/Order.vue"),
+    //     meta: {
+    //       title: "订单管理",
+    //     },
+    //   },
+    //   {
+    //     path: "/setting/base",
+    //     name: "/setting/base",
+    //     component: () => import("@/views/SetSyetem.vue"),
+    //     meta: {
+    //       title: "系统设置",
+    //     },
+    //   },
+    //   {
+    //     path: "/distribution/index",
+    //     name: "/distribution/index",
+    //     component: () => import("@/views/Distribution.vue"),
+    //     meta: {
+    //       title: "分销员管理",
+    //     },
+    //   },
+    //   {
+    //     path: "/distribution/setting",
+    //     name: "/distribution/setting",
+    //     component: () => import("@/views/DisSetting.vue"),
+    //     meta: {
+    //       title: "分销设置",
+    //     },
+    //   },
+    // ],
   },
-  {
-    path: "/login",
-    name: "Login",
-    component: () => import("@/views/Login.vue"),
-  },
+  
   {
     path: "/about",
     name: "About",

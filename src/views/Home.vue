@@ -1,16 +1,27 @@
 <template>
   <div style="height: 100%">
     <el-container style="height: 100%">
-      <el-header class="el-header">
+      <el-header>
+        <!-- 头部区域 -->
         <Header></Header>
       </el-header>
       <el-container>
-        <el-aside class="el-aside" width="200px">
+        <el-aside :width="$store.state.iscollapse ? '64px' : '200px'">
+          <!-- 左侧菜单 -->
           <Menu></Menu>
         </el-aside>
-        <el-main class="el-main">
+        <el-main>
+          <!-- 导航菜单 -->
           <TagMenu></TagMenu>
-          <router-view></router-view>
+          <!-- 主体内容 -->
+          <router-view v-slot="{ Component }">
+            <!-- v-slot="{Component}" 拿到点击之后的动态组件 -->
+            <!-- 页面缓存 -->
+            <!-- 如何实现动态组件的调用 使用component -->
+            <keep-alive :max="8">
+              <component :is="Component"></component>
+            </keep-alive>
+          </router-view>
         </el-main>
       </el-container>
     </el-container>
@@ -27,11 +38,14 @@ import TagMenu from "@/components/TagMenu.vue";
 .el-header {
   background: #1aa094;
 }
+
 .el-main {
   background: #f2f4f5;
   height: 100%;
 }
+
 .el-aside {
   height: 100%;
+  background: #32363f;
 }
 </style>
