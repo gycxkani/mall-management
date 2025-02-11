@@ -67,11 +67,11 @@ const ruleFormLogin = reactive({
 const rulesLogin = {
   username: [
     { required: true, message: "请输入用户名", trigger: "blur" },
-    { min: 6, max: 15, message: "长度应为6到15位之间", trigger: "blur" },
+    { min: 5, max: 15, message: "长度应为5到15位之间", trigger: "blur" },
   ],
   password: [
     { required: true, message: "请输入密码", trigger: "blur" },
-    { min: 6, max: 15, message: "长度应为6到15位之间", trigger: "blur" },
+    { min: 5, max: 15, message: "长度应为5到15位之间", trigger: "blur" },
   ],
 };
 // 登录
