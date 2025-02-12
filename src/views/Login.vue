@@ -47,14 +47,14 @@
 
 <script setup>
 import { ref, reactive, onMounted, onBeforeMount } from "vue";
-import { loginFn } from "@/api/login";
+import { loginFn, getUserInfoFn } from "@/api/login";
 import { ElMessage } from "element-plus";
-// import { useRouter } from 'vue-router'
-// //解构useStore方法
-// import { useStore } from 'vuex'
-// //获取仓库实例
-// const store = useStore()
-// const router = useRouter()
+import { useRouter } from 'vue-router'
+//解构useStore方法
+import { useStore } from 'vuex'
+//获取仓库实例
+const store = useStore()
+const router = useRouter()
 
 //定义loading，初始化为false，正常单击
 const loading = ref(false);
