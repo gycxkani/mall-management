@@ -16,15 +16,15 @@ const routes = [
     path: "/home",
     name: "admin",
     component: () => import("@/views/Home.vue"),
-    // children: [
-    //   {
-    //     path: "/home",
-    //     name: "/home",
-    //     component: () => import("@/views/HomeIndex.vue"),
-    //     meta: {
-    //       title: "后台首页",
-    //     },
-    //   },
+    children: [
+      {
+        path: "/home",
+        name: "/home",
+        component: () => import("@/views/HomeIndex.vue"),
+        meta: {
+          title: "后台首页",
+        },
+      },
     //   {
     //     path: "/goods/list",
     //     name: "/goods/list",
@@ -153,7 +153,7 @@ const routes = [
     //       title: "分销设置",
     //     },
     //   },
-    // ],
+    ],
   },
   
   {

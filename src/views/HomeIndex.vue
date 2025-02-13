@@ -57,6 +57,7 @@
       <el-col :span="12">
         <Echarts></Echarts>
       </el-col>
+
       <el-col :span="12">
         <GoodsState
           gtitle="店铺提示"
@@ -88,9 +89,10 @@ const goodsData = ref([]);
 const orderData = ref([]);
 
 getAdminInfo().then((res) => {
-  if (res.msg && res.msg == "ok") {
-    panelsData.value = res.data.panels;
+  if (res && res.msg !== "ok") {
+    return;
   }
+  panelsData.value = res.data.panels;
 });
 
 //商铺提示
