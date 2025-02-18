@@ -49,7 +49,7 @@
         </el-card>
       </el-col>
     </el-row>
-    
+
     <!-- 分类组件 -->
     <NavCateList></NavCateList>
 
@@ -89,10 +89,9 @@ const goodsData = ref([]);
 const orderData = ref([]);
 
 getAdminInfo().then((res) => {
-  if (res && res.msg !== "ok") {
-    return;
+  if (res.msg && res.msg == "ok") {
+    panelsData.value = res.data.panels;
   }
-  panelsData.value = res.data.panels;
 });
 
 //商铺提示

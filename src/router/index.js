@@ -41,14 +41,14 @@ const routes = [
     //       title: "分类管理",
     //     },
     //   },
-    //   {
-    //     path: "/image/list",
-    //     name: "/image/list",
-    //     component: () => import("@/views/PicList.vue"),
-    //     meta: {
-    //       title: "图库管理",
-    //     },
-    //   },
+      {
+        path: "/image/list",
+        name: "/image/list",
+        component: () => import("@/views/PicList.vue"),
+        meta: {
+          title: "图库管理",
+        },
+      },
     //   {
     //     path: "/notice/list",
     //     name: "/notice/list",

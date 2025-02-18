@@ -11,11 +11,11 @@ import HelloWorld from "./components/HelloWorld.vue";
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div> -->
-  <nav>
+  <!-- <nav>
     <router-link to="./home">Home</router-link> |
     <router-link to="./login">Login</router-link> |
     <router-link to="./about">About</router-link> 
-  </nav>
+  </nav> -->
   <router-view></router-view>
   <!-- <HelloWorld msg="Vite + Vue" /> -->
 </template>
