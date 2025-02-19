@@ -39,8 +39,7 @@
           <el-input v-model="ruleFormAddPic.name" />
         </el-form-item>
         <el-form-item label="分类排序" prop="order">
-          <!-- <el-input v-model="ruleFormAddPic.order" />
-                     -->
+          <!-- <el-input v-model="ruleFormAddPic.order" /> -->
           <el-input-number
             v-model="ruleFormAddPic.order"
             @change="handleChangeNums"
