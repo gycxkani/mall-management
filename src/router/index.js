@@ -57,14 +57,14 @@ const routes = [
     //       title: "公告管理",
     //     },
     //   },
-    //   {
-    //     path: "/manager/list",
-    //     name: "/manager/list",
-    //     component: () => import("@/views/Manager.vue"),
-    //     meta: {
-    //       title: "管理员管理",
-    //     },
-    //   },
+      {
+        path: "/manager/list",
+        name: "/manager/list",
+        component: () => import("@/views/Manager.vue"),
+        meta: {
+          title: "管理员管理",
+        },
+      },
     //   {
     //     path: "/access/list",
     //     name: "/access/list",
