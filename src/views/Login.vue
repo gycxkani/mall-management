@@ -87,10 +87,10 @@ const loginHandle = () => {
       //调用登录api
       const res = await loginFn(ruleFormLogin);
       console.log(res);
-      if (!res.data || res.data.status !== 200) {
-        //登录失败提示
-        return ElMessage.error(res.msg);
-      }
+      // if (!res.data || res.data.status !== 200) {
+      //   //登录失败提示
+      //   return ElMessage.error(res.msg);
+      // }
 
       //登录成功提示
       ElMessage({

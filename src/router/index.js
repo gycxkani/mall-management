@@ -65,14 +65,14 @@ const routes = [
           title: "管理员管理",
         },
       },
-    //   {
-    //     path: "/access/list",
-    //     name: "/access/list",
-    //     component: () => import("@/views/Rules.vue"),
-    //     meta: {
-    //       title: "菜单权限管理",
-    //     },
-    //   },
+      {
+        path: "/access/list",
+        name: "/access/list",
+        component: () => import("@/views/Rules.vue"),
+        meta: {
+          title: "菜单权限管理",
+        },
+      },
     //   {
     //     path: "/role/list",
     //     name: "/role/list",
