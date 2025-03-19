@@ -73,14 +73,14 @@ const routes = [
           title: "菜单权限管理",
         },
       },
-    //   {
-    //     path: "/role/list",
-    //     name: "/role/list",
-    //     component: () => import("@/views/Role.vue"),
-    //     meta: {
-    //       title: "角色管理",
-    //     },
-    //   },
+      {
+        path: "/role/list",
+        name: "/role/list",
+        component: () => import("@/views/Role.vue"),
+        meta: {
+          title: "角色管理",
+        },
+      },
     //   {
     //     path: "/skus/list",
     //     name: "/skus/list",
