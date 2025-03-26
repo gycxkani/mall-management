@@ -25,14 +25,14 @@ const routes = [
           title: "后台首页",
         },
       },
-    //   {
-    //     path: "/goods/list",
-    //     name: "/goods/list",
-    //     component: () => import("@/views/GoodsList.vue"),
-    //     meta: {
-    //       title: "商品管理",
-    //     },
-    //   },
+      {
+        path: "/goods/list",
+        name: "/goods/list",
+        component: () => import("@/views/GoodsList.vue"),
+        meta: {
+          title: "商品管理",
+        },
+      },
     //   {
     //     path: "/category/list",
     //     name: "/category/list",
@@ -81,14 +81,14 @@ const routes = [
           title: "角色管理",
         },
       },
-    //   {
-    //     path: "/skus/list",
-    //     name: "/skus/list",
-    //     component: () => import("@/views/Skus.vue"),
-    //     meta: {
-    //       title: "规格管理",
-    //     },
-    //   },
+      {
+        path: "/skus/list",
+        name: "/skus/list",
+        component: () => import("@/views/Skus.vue"),
+        meta: {
+          title: "规格管理",
+        },
+      },
     //   {
     //     path: "/coupon/list",
     //     name: "/coupon/list",
@@ -97,14 +97,14 @@ const routes = [
     //       title: "优惠券管理",
     //     },
     //   },
-    //   {
-    //     path: "/level/list",
-    //     name: "/level/list",
-    //     component: () => import("@/views/Level.vue"),
-    //     meta: {
-    //       title: "会员等级",
-    //     },
-    //   },
+      {
+        path: "/level/list",
+        name: "/level/list",
+        component: () => import("@/views/Level.vue"),
+        meta: {
+          title: "会员等级",
+        },
+      },
       {
         path: "/user/list",
         name: "/user/list",
