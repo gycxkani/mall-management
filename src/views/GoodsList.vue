@@ -120,11 +120,7 @@
         </el-table-column>
         <el-table-column label="审核状态" v-if="queryData.tab !== 'delete'">
           <template #default="scope">
-            <!-- 
-                            ischeck==0表示未审核
-                            1表示通过
-                            2表示拒绝
-                                                    -->
+            <!-- ischeck==0表示未审核 1表示通过 2表示拒绝 -->
             <div v-if="scope.row.ischeck == 0">
               <el-tag type="success" class="tag2">通过</el-tag>
               <el-tag type="info">拒绝</el-tag>

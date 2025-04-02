@@ -1,11 +1,7 @@
-<!-- 规格值
-     GoodsSkuAdd的子组件
--->
+<!-- 规格值 GoodsSkuAdd的子组件 -->
 <template>
   <div>
-    <!-- <span v-for="(sub, i) in item.goodsSkusCardValue" :key="i">
-                        {{ sub.text }}
-                    </span> -->
+    <!-- <span v-for="(sub, i) in item.goodsSkusCardValue" :key="i"> {{ sub.text }} </span> -->
     <el-tag
       v-for="(tag, i) in item.goodsSkusCardValue"
       :key="i"

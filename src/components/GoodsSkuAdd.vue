@@ -24,9 +24,7 @@
         </el-input>
       </div>
       <div class="sku_content">
-        <!-- <span v-for="(sub, i) in item.goodsSkusCardValue" :key="i">
-                            {{ sub.text }}
-                        </span>               -->
+        <!-- <span v-for="(sub, i) in item.goodsSkusCardValue" :key="i"> {{ sub.text }} </span> -->
         <goodsSkuVal :skuId="item.id"></goodsSkuVal>
       </div>
     </div>

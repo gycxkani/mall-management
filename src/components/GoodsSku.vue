@@ -64,6 +64,7 @@ import goodsSkuAdd from "@/components/GoodsSkuAdd.vue";
 import { ElMessage } from "element-plus";
 import { editStuFn, getGoodsInfoById } from "@/api/goods.js";
 import { ref, reactive } from "vue";
+
 const dialogVisible = ref(false);
 
 //表单数据源

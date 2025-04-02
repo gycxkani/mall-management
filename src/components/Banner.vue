@@ -33,7 +33,6 @@ const formData = reactive({
 
 const goodsId = ref(null);
 
-//暴露方法打开对话框
 const openDialog = async (row) => {
   //获取父组件传递的id
   goodsId.value = row.id;
@@ -65,6 +64,7 @@ const submitOk = async () => {
   dialogVisible.value = false;
 };
 
+//暴露方法打开对话框
 defineExpose({
   openDialog,
 });
