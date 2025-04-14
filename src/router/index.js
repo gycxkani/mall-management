@@ -33,14 +33,14 @@ const routes = [
           title: "商品管理",
         },
       },
-    //   {
-    //     path: "/category/list",
-    //     name: "/category/list",
-    //     component: () => import("@/views/cateList.vue"),
-    //     meta: {
-    //       title: "分类管理",
-    //     },
-    //   },
+      {
+        path: "/category/list",
+        name: "/category/list",
+        component: () => import("@/views/cateList.vue"),
+        meta: {
+          title: "分类管理",
+        },
+      },
       {
         path: "/image/list",
         name: "/image/list",

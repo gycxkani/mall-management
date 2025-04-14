@@ -3,7 +3,7 @@
 -->
 <template>
   <el-form-item label="添加规格">
-    <div class="sku_mian" v-for="(item, i) in skuList" :key="i">
+    <div class="sku_main" v-for="(item, i) in skuList" :key="i">
       <div class="sku_top">
         <span>
           <el-button
@@ -39,7 +39,7 @@ import goodsSkuVal from "@/components/GoodsSkuVal.vue";
 </script>
 
 <style lang="less" scoped>
-.sku_mian {
+.sku_main {
   width: 100%;
   height: auto;
   border: 1px solid #dbdbdb;
