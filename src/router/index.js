@@ -121,14 +121,14 @@ const routes = [
     //       title: "评论管理",
     //     },
     //   },
-    //   {
-    //     path: "/order/list",
-    //     name: "/order/list",
-    //     component: () => import("@/views/Order.vue"),
-    //     meta: {
-    //       title: "订单管理",
-    //     },
-    //   },
+      {
+        path: "/order/list",
+        name: "/order/list",
+        component: () => import("@/views/Order.vue"),
+        meta: {
+          title: "订单管理",
+        },
+      },
     //   {
     //     path: "/setting/base",
     //     name: "/setting/base",
