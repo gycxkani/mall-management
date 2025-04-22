@@ -89,14 +89,14 @@ const routes = [
           title: "规格管理",
         },
       },
-    //   {
-    //     path: "/coupon/list",
-    //     name: "/coupon/list",
-    //     component: () => import("@/views/Coupon.vue"),
-    //     meta: {
-    //       title: "优惠券管理",
-    //     },
-    //   },
+      {
+        path: "/coupon/list",
+        name: "/coupon/list",
+        component: () => import("@/views/Coupon.vue"),
+        meta: {
+          title: "优惠券管理",
+        },
+      },
       {
         path: "/level/list",
         name: "/level/list",
@@ -113,14 +113,14 @@ const routes = [
           title: "用户管理",
         },
       },
-    //   {
-    //     path: "/comment/list",
-    //     name: "/comment/list",
-    //     component: () => import("@/views/Comment.vue"),
-    //     meta: {
-    //       title: "评论管理",
-    //     },
-    //   },
+      {
+        path: "/comment/list",
+        name: "/comment/list",
+        component: () => import("@/views/Comment.vue"),
+        meta: {
+          title: "评论管理",
+        },
+      },
       {
         path: "/order/list",
         name: "/order/list",
@@ -137,14 +137,14 @@ const routes = [
     //       title: "系统设置",
     //     },
     //   },
-    //   {
-    //     path: "/distribution/index",
-    //     name: "/distribution/index",
-    //     component: () => import("@/views/Distribution.vue"),
-    //     meta: {
-    //       title: "分销员管理",
-    //     },
-    //   },
+      {
+        path: "/distribution/index",
+        name: "/distribution/index",
+        component: () => import("@/views/Distribution.vue"),
+        meta: {
+          title: "分销员管理",
+        },
+      },
     //   {
     //     path: "/distribution/setting",
     //     name: "/distribution/setting",
