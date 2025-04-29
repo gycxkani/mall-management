@@ -49,14 +49,14 @@ const routes = [
           title: "图库管理",
         },
       },
-    //   {
-    //     path: "/notice/list",
-    //     name: "/notice/list",
-    //     component: () => import("@/views/News.vue"),
-    //     meta: {
-    //       title: "公告管理",
-    //     },
-    //   },
+      {
+        path: "/notice/list",
+        name: "/notice/list",
+        component: () => import("@/views/News.vue"),
+        meta: {
+          title: "公告管理",
+        },
+      },
       {
         path: "/manager/list",
         name: "/manager/list",
@@ -129,14 +129,14 @@ const routes = [
           title: "订单管理",
         },
       },
-    //   {
-    //     path: "/setting/base",
-    //     name: "/setting/base",
-    //     component: () => import("@/views/SetSyetem.vue"),
-    //     meta: {
-    //       title: "系统设置",
-    //     },
-    //   },
+      {
+        path: "/setting/base",
+        name: "/setting/base",
+        component: () => import("@/views/SetSyetem.vue"),
+        meta: {
+          title: "系统设置",
+        },
+      },
       {
         path: "/distribution/index",
         name: "/distribution/index",
@@ -145,14 +145,14 @@ const routes = [
           title: "分销员管理",
         },
       },
-    //   {
-    //     path: "/distribution/setting",
-    //     name: "/distribution/setting",
-    //     component: () => import("@/views/DisSetting.vue"),
-    //     meta: {
-    //       title: "分销设置",
-    //     },
-    //   },
+      {
+        path: "/distribution/setting",
+        name: "/distribution/setting",
+        component: () => import("@/views/DisSetting.vue"),
+        meta: {
+          title: "分销设置",
+        },
+      },
     ],
   },
   
